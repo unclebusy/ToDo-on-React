@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Todo application built with React, TypeScript, SCSS, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add, toggle, and filter tasks
+- Clear completed tasks
+- Responsive design using SCSS
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: JavaScript library for building user interfaces
+- **TypeScript**: Superset of JavaScript that adds static typing
+- **SCSS**: Sassy CSS for styling
+- **Vite**: Next-generation front-end tooling
+- **Jest**: JavaScript testing framework for unit testing
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) installed.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd todo-on-react
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+npm start
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Running Tests
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+To run the tests using Jest, execute:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
+```bash
+npm test
 ```
+
+
+## Contributing
+
+Feel free to open issues or submit pull requests for improvements!
+
+## License
+
+This project is licensed under the MIT License.
