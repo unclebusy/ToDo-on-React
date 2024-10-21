@@ -1,0 +1,16 @@
+.wrapperButtonsField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0 0 0;
+}
+
+.wrapperButtonsTasksStatus {
+  display: flex;
+  gap: 0.5rem;
+
+  button:last-child {
+    margin-left: auto;
+  }
+}
+
