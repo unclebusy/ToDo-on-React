@@ -1,6 +1,23 @@
 .wrapperList {
+  flex: 1;
   height: 100%;
   width: 100%;
-  border: solid 4px black;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: white;
   box-sizing: border-box;
+  border: #2196f3 solid 1px;
+  border-radius: 0.5rem;
+
+  @media (min-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 ;
 }

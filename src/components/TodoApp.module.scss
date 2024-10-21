@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  padding: 0.5rem ;
   background: #2196f3;
-  padding: 1rem;
   box-sizing: border-box;
 
   h1 {
@@ -13,11 +12,10 @@
   }
 
   @media (min-width: 768px) {
-    padding: 4rem;
+    padding: 2rem;
   }
 
   @media (min-width: 1280px) {
     width: calc(768px - 10rem);
-    padding: 4rem;
   }
 }

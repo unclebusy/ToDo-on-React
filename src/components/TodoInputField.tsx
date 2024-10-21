@@ -2,6 +2,7 @@ import styles from './TodoInputField.module.scss';
 import * as React from 'react';
 import { useState } from 'react';
 import { Task, TodoInputFieldProps } from '../types';
+import { Button } from '@mui/material';
 
 const TodoInputField: React.FC<Pick<TodoInputFieldProps, 'setTasksList'>> = ({ setTasksList }) => {
   const [currentTask, setCurrentTask] = useState('');
@@ -39,9 +40,9 @@ const TodoInputField: React.FC<Pick<TodoInputFieldProps, 'setTasksList'>> = ({ s
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      <button type="button" onClick={handleAddTask}>
+      <Button variant="contained" onClick={handleAddTask}>
         Add
-      </button>
+      </Button>
     </div>
   );
 };

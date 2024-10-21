@@ -1,6 +1,7 @@
 import styles from './TodoButtons.module.scss';
 import * as React from 'react';
 import { FilterTask, TodoButtonsProps } from '../types';
+import { Button } from '@mui/material';
 
 const TodoButtons: React.FC<TodoButtonsProps> = ({ tasksList, setTasksList, setFilterTask }) => {
   const tasksLeft = tasksList.length;
@@ -14,21 +15,31 @@ const TodoButtons: React.FC<TodoButtonsProps> = ({ tasksList, setTasksList, setF
   };
 
   return (
-    <div className={styles.wrapperButtonsField}>
+    <div className={styles.wrapperButtons}>
       <span>{tasksLeft} tasks left</span>
       <div className={styles.wrapperButtonsTasksStatus}>
-        <button type="button" onClick={() => handleChangeFilterTask('all')}>
+        <Button variant="contained" type="button" onClick={() => handleChangeFilterTask('all')}>
           All
-        </button>
-        <button type="button" onClick={() => handleChangeFilterTask('active')}>
+        </Button>
+        <Button variant="contained" type="button" onClick={() => handleChangeFilterTask('active')}>
           Active
-        </button>
-        <button type="button" onClick={() => handleChangeFilterTask('completed')}>
+        </Button>
+        <Button
+          variant="contained"
+          type="button"
+          onClick={() => handleChangeFilterTask('completed')}
+        >
           Completed
-        </button>
-        <button type="button" onClick={handleClearCompletedTasks}>
+        </Button>
+
+        <Button
+          variant="contained"
+          color="success"
+          type="button"
+          onClick={handleClearCompletedTasks}
+        >
           Clear completed
-        </button>
+        </Button>
       </div>
     </div>
   );

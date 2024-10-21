@@ -1,4 +1,6 @@
 import * as React from 'react';
+import Checkbox from '@mui/material/Checkbox';
+import styles from './TodoTask.module.scss';
 
 interface TodoTaskProps {
   taskName: string;
@@ -8,8 +10,8 @@ interface TodoTaskProps {
 
 const TodoTask: React.FC<TodoTaskProps> = ({ taskName, isCompleted, onToggle }) => {
   return (
-    <li>
-      <input type="checkbox" checked={isCompleted} onChange={onToggle} />
+    <li className={styles.elem}>
+      <Checkbox color="success" checked={isCompleted} onChange={onToggle} />
       {taskName}
     </li>
   );
