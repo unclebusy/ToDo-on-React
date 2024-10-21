@@ -1,5 +1,12 @@
 .elem {
+  display: flex;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+

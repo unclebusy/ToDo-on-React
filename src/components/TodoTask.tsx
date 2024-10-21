@@ -12,7 +12,7 @@ const TodoTask: React.FC<TodoTaskProps> = ({ taskName, isCompleted, onToggle }) 
   return (
     <li className={styles.elem}>
       <Checkbox color="success" checked={isCompleted} onChange={onToggle} />
-      {taskName}
+      <span className={isCompleted ? styles.completed : ''}>{taskName}</span>
     </li>
   );
 };
