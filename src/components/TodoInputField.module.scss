@@ -8,9 +8,8 @@
   border: #2196f3 solid 1px;
   border-radius: 0.5rem;
 
-  input {
+  .inputField {
     width: 100%;
-    height: 2rem;
   }
 
   button {
@@ -21,7 +20,6 @@
   @media (min-width: 768px) {
     padding: 1rem;
   }
-
 }
 
 

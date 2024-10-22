@@ -13,7 +13,7 @@ describe('TodoApp', () => {
 
   test('adds a new task', () => {
     render(<TodoApp />);
-    const inputElement = screen.getByPlaceholderText(/what needs to be done?/i);
+    const inputElement = screen.getByLabelText(/what needs to be done?/i);
     fireEvent.change(inputElement, { target: { value: 'New Task' } });
     fireEvent.click(screen.getByText(/add/i));
 

@@ -2,7 +2,7 @@ import styles from './TodoInputField.module.scss';
 import * as React from 'react';
 import { useState } from 'react';
 import { Task, TodoInputFieldProps } from '../types';
-import { Button } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 
 const TodoInputField: React.FC<Pick<TodoInputFieldProps, 'setTasksList'>> = ({ setTasksList }) => {
   const [currentTask, setCurrentTask] = useState('');
@@ -33,9 +33,12 @@ const TodoInputField: React.FC<Pick<TodoInputFieldProps, 'setTasksList'>> = ({ s
 
   return (
     <div className={styles.wrapperInputField}>
-      <input
+      <TextField
+        className={styles.inputField}
+        id="outlined-basic"
         type="text"
-        placeholder="What needs to be done?"
+        label="What needs to be done?"
+        variant="outlined"
         value={currentTask}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
