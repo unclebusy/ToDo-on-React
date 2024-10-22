@@ -36,14 +36,14 @@ const TodoInputField: React.FC<Pick<TodoInputFieldProps, 'setTasksList'>> = ({ s
       <TextField
         className={styles.inputField}
         id="outlined-basic"
-        type="text"
+        type="search"
         label="What needs to be done?"
         variant="outlined"
         value={currentTask}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      <Button variant="contained" onClick={handleAddTask}>
+      <Button type="submit" variant="contained" onClick={handleAddTask}>
         Add
       </Button>
     </div>
